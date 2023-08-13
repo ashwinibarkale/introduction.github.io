@@ -999,7 +999,7 @@ section {
 /* Change title color to hot pink */
 .interest-card h3 {
   color: black;
-  text-transforuppercase;
+  text-transform: uppercase;
 }
 
 
