@@ -687,28 +687,31 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form name="submit-to-google-sheet" class="my-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="Name" class="form-control"  placeholder="Your Name" required>
+                 
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="Email" placeholder="Your Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="Subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="Message"placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Send Message</button>
+              </div>
             </form>
+            <span id="msg"></span>
           </div>
 
         </div>
@@ -718,6 +721,7 @@
     </section><!-- End Contact Me Section -->
 
   </main><!-- End #main -->
+
 
   <!-- =================================================== Footer =================================================================== -->
   <footer id="footer">
@@ -735,7 +739,7 @@
       </div>
       <div class="credits">
        
-        Designed by  <a href="https://ashwinibarkale.github.io/introduction.github.io/"><b><b><b>Ashwini Barkale</b></b></b></a>
+        Designed by  <a href="https://ashwinibarkale.github.io/introduction.github.io/"><b><b><b><b>Ashwini Barkale</b></b></b></b></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -753,7 +757,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+  <script>
 
+
+
+    /**
+         * CONTACT FORM JS CODE
+         */
+    
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyaOffChYqGT31fXM-yHLdcQ11Rjmc0S-2y9tqvOBeeVHYm1Gm2GxPSInvVFjjTnEAj/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Your message has been sent. Thank you!"   
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000) 
+                form.reset()
+                });
+            })
+            .catch(error => console.error('Error!', error.message))      
+      </script>
+  
 </body>
 
 </html>
