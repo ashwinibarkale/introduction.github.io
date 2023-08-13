@@ -1263,7 +1263,7 @@ section {
   background: hotpink;
 }
 
-.contact .php-email-form {
+.contact .my-form {
   box-shadow: 
   0 0 15px rgba(255, 105, 180, 0.15),
   0 0 30px rgba(255, 105, 180, 0.3),
@@ -1272,7 +1272,7 @@ section {
   padding: 27px;border-radius: 10px;
 }
 
-.contact .php-email-form .validate {
+.contact .my-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1280,7 +1280,15 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+#msg{
+  color:aqua;
+ margin-bottom: -40px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contact .my-form .error-message {
   display: none;
   color: pink;
   background: #ed3c0d;
@@ -1289,11 +1297,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .my-form .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .my-form .sent-message {
   display: none;
   color: pink;
   background: #18d26e;
@@ -1302,14 +1310,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .my-form .loading {
   display: none;
   background: wheat;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .my-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1321,30 +1329,31 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .my-form input,
+.contact .my-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 10px;
 }
 
-.contact .php-email-form input::focus,
-.contact .php-email-form textarea::focus {
+.contact .my-form input::focus,
+.contact .my-form textarea::focus {
   background-color: hotpink;
 }
 
-.contact .php-email-form input {
-  padding: 12px 15px;
+.contact .my-form input {
+  padding: 10px 30px;
   border-radius: 10px;
   
 }
 
-.contact .php-email-form textarea {
-  padding: 12px 15px;
+.contact .my-form textarea {
+  padding: 30px 40px;
+  
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .my-form button[type=submit] {
   background: hotpink;
   border: 0;
   padding: 10px 24px;
@@ -1353,34 +1362,26 @@ section {
   border-radius: 5px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .my-form button[type=submit]:hover {
   background: hotpink;
 }
 
 
 /* styles.css */
 
-.php-email-form {
+.my-form {
   margin-bottom: 20px; /* Adjust margin for the contact form */
   padding: 10px; /* Add some padding to the contact form */
   border: 2px solid transparent; /* Add transparent border to the contact form */
-  transition: border 0.3s ease; /* Add transition effect for the hover border */
+  transition: border 0.3s ease;
+ 
 }
 
-.php-email-form:hover {
+.my-form:hover {
   border: 2px solid red; /* Add border color on hover */
 }
 
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1391,7 +1392,7 @@ section {
     
       background: url("../img/footerimg.jpg") top center no-repeat;
       background-size: cover;
-      color: #fff;
+      color: #f0f0f0;
       font-size: 14px;
       text-align: center;
       padding: 80px 0;
@@ -1439,7 +1440,7 @@ section {
   font-size: 18px;
   display: inline-block;
   background: hotpink;
-  color: #fff;
+  color: black;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1448,6 +1449,7 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
+ 
 }
 
 #footer .social-links a:hover {
