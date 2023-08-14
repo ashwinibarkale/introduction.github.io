@@ -41,7 +41,7 @@ h6 {
   text-stroke: 2px #f0f0f0;
   font-size: 36px; /* Default font size */
   line-height: 1.5; /* Adjust the line height */
-  text-shadow: 5px 5px 7px rgba(255, 255, 255, 0.6), -3px -5px 6px rgba(255, 192, 203, 0.6); /* Pink and white shadow effect */
+  text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.6), -3px -5px 6px rgba(255, 192, 203, 0.2); /* Pink and white shadow effect */
 }
 
 /* Mobile media query - adjust the max-width as per your needs */
@@ -69,22 +69,32 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: hotpink;
+  border-radius: 5px;
+  background: lightseagreen;
+  
   width: 40px;
+ 
   height: 40px;
-  border-radius: 4px;
+  
   transition: all 0.4s;
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.45);
+ 
 }
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: red;
   line-height: 0;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .back-to-top:hover {
-  background: aqua;
-  color: #fff;
+  background: lightgreen;
+  color: hotpink;
 }
 
 .back-to-top.active {
@@ -388,20 +398,35 @@ h6 {
   text-transform: uppercase;
 }
 
+
+
+
+
+
+
+
+
 #hero .btn-scroll {
   transition: 0.4s;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6), -2px -3px 4px rgba(255, 192, 203, 0.3); /* Pink and white shadow effect */
-
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4), -2px -3px 4px rgba(255, 192, 203, 0.3); /* Pink and white shadow effect */
+  color: #f0f0f0;
   animation: up-down 0.5s ease-in-out infinite alternate-reverse both;
 }
 
 #hero .btn-scroll i {
-  font-size: 100px;
+  font-size: 40px;
 }
 
 #hero .btn-scroll:hover {
-  color: whitesmoke;
+ color: #FF1493;
 }
+
+
+
+
+
+
+
 /* Mobile media query - adjust the max-width as per your needs */
 @media only screen and (max-width: 767px) {
   #hero {
@@ -442,7 +467,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
 
@@ -461,6 +486,7 @@ section {
   padding-bottom: 0;
   color: aqua;
   position: relative;
+  text-shadow: 3px 3px 4px rgba(255, 192, 203, 0.6);
   z-index: 2;
   font-family:'Courier New', Courier, monospace;
 }
@@ -687,9 +713,9 @@ section {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 
-  0 0 12px rgba(255, 105, 180, 0.15),
+  0 0 12px rgba(255, 105, 180, 0.10),
   0 0 20px rgba(255, 105, 180, 0.3),
-  0 0 30px rgba(255, 105, 180, 0.45);
+  0 0 30px rgba(255, 105, 180, 0.30);
   width: 400px; /* Increased width for the grid */
   text-align: center;
   animation: colorChange 5s infinite alternate;
@@ -755,7 +781,6 @@ section {
     width: 100%; /* Full width on mobile devices */
   }
 }
-
 
 /*--------------------------------------------------------------
 # EDUCATION
@@ -859,7 +884,9 @@ section {
 /* Adjust testimonial image size and positioning */
 .testimonials .testimonial-item .testimonial-img {
   width: 100px;
-  height: 100px; /* Adjust the height as needed */
+  cursor: pointer;
+  
+  height: 400px; /* Adjust the height as needed */
   
   margin: 0 auto;
   display: flex;
@@ -875,6 +902,8 @@ section {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+  cursor: pointer;
+  
 }
 
 
@@ -885,6 +914,11 @@ section {
   background-position: center center;
   background-size: cover;
   position: relative;
+  cursor: pointer;
+  box-shadow: 
+0 0 10px rgba(255, 105, 180, 0.15),
+0 0 20px rgba(255, 105, 180, 0.3),
+0 0 10px rgba(255, 105, 180, 0.45);
 }
 
 .testimonials::before {
@@ -1137,7 +1171,7 @@ section {
   transition: all 0.3s ease-in-out;
   text-align: center;
   border: 2px solid red;
-  color: #000000;
+  color: black;
   font-weight: bold;
   border-radius: 10px;
 }
@@ -1150,13 +1184,21 @@ section {
   border-radius: 50%;
   width: 72px;
   height: 72px;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.8);
   background: palevioletred;
+ 
+
 }
 
 .services .icon i {
   font-size: 36px;
   line-height: 1;
-  color: black;
+  color: #f0f0f0;
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.45);
+ 
 }
 
 .services .title {
@@ -1190,9 +1232,9 @@ section {
  
   text-align: center;
   box-shadow: 
-  0 0 15px rgba(255, 105, 180, 0.15),
-  0 0 30px rgba(255, 105, 180, 0.3),
-  0 0 50px rgba(255, 105, 180, 0.45);
+  0 0 30px rgba(255, 105, 180, 0.15),
+  0 0 50px rgba(255, 105, 180, 0.3),
+  0 0 70px rgba(255, 105, 180, 0.45);
   padding: 20px 0 30px 0;
 }
 
@@ -1208,7 +1250,12 @@ section {
 }
 
 .info-box:hover {
-  border: 2px solid red; /* Add border color on hover */
+  border: 2px solid red;
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.45);
+  /* Add border color on hover */
 }
 
 
@@ -1218,6 +1265,9 @@ section {
   border-radius: 50%;
   padding: 15px;
   background: wheat;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.4);
+ 
+ 
 }
 
 .contact .info-box h3 {
@@ -1252,21 +1302,29 @@ section {
   padding: 14px;
   border-radius: 50px;
   border: 2px solid hotpink;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.4);
+    
+ 
 }
 
 .contact .social-links a:hover {
   color: #fff;
   border-color: hotpink;
   background: hotpink;
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.45);
+ 
 }
 
 .contact .my-form {
   box-shadow: 
-  0 0 15px rgba(255, 105, 180, 0.15),
-  0 0 30px rgba(255, 105, 180, 0.3),
-  0 0 50px rgba(255, 105, 180, 0.45);
+  0 0 30px rgba(255, 105, 180, 0.15),
+  0 0 50px rgba(255, 105, 180, 0.3),
+  0 0 70px rgba(255, 105, 180, 0.45);
  background-color: lemonchiffon;
-  padding: 27px;border-radius: 10px;
+  padding: 40px;border-radius: 10px;
 }
 
 .contact .my-form .validate {
@@ -1342,25 +1400,33 @@ section {
 .contact .my-form input {
   padding: 10px 30px;
   border-radius: 10px;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.4);
+  background-color: lavender;
   
 }
 
 .contact .my-form textarea {
   padding: 30px 40px;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.4);
+  background-color: lavender;
+ 
   
 }
 
 .contact .my-form button[type=submit] {
   background: hotpink;
   border: 0;
+  box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.8);
   padding: 10px 24px;
   color: black;
   transition: 0.4s;
   border-radius: 5px;
+ border-radius: 10px;
+ 
 }
 
 .contact .my-form button[type=submit]:hover {
-  background: hotpink;
+  background: aqua;
 }
 
 
@@ -1456,7 +1522,7 @@ section {
   font-size: 18px;
   display: inline-block;
   background: hotpink;
-  color: black;
+  color: aqua;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1465,6 +1531,12 @@ section {
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.45);
+   
+ 
  
 }
 
@@ -1472,6 +1544,12 @@ section {
   background: hotpink;
   color: #fff;
   text-decoration: none;
+ 
+  box-shadow: 
+    0 0 10px rgba(255, 105, 180, 0.15),
+    0 0 20px rgba(255, 105, 180, 0.3),
+    0 0 30px rgba(255, 105, 180, 0.45);
+ 
 }
 
 #footer .copyright {
