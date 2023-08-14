@@ -36,31 +36,26 @@ h6 {
 --------------------------------------------------------------*/
 /* Default styles */
 #hero h1 {
-  color: white; /* Set text color to white */
-  -webkit-text-stroke: 2px #f2f2f2;; /* Set text stroke color to hotpink */
-  text-stroke: 2px #f2f2f2;
+  
+  -webkit-text-stroke: 2px #f0f0f0;/* Set white text stroke color */
+  text-stroke: 2px #f0f0f0;
   font-size: 36px; /* Default font size */
   line-height: 1.5; /* Adjust the line height */
+  text-shadow: 5px 5px 7px rgba(255, 255, 255, 0.6), -3px -5px 6px rgba(255, 192, 203, 0.6); /* Pink and white shadow effect */
 }
 
 /* Mobile media query - adjust the max-width as per your needs */
 @media only screen and (max-width: 767px) {
   #hero h1 {
-    -webkit-text-stroke: 1px #f2f2f2;; /* Set text stroke color to hotpink */
-    text-stroke: 1px #f2f2f2;;
+    -webkit-text-stroke: 1px #f0f0f0; /* Set white text stroke color */
+    text-stroke: 1px #f0f0f0;
     font-size: 24px; /* Adjust the font size for mobile */
     line-height: 1.3; /* Adjust the line height for mobile */
     display: flex; /* Enable flexbox */
     align-items: center; /* Center vertically */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6), -2px -3px 4px rgba(255, 192, 203, 0.3); /* Pink and white shadow effect */
   }
 }
-
-
-
-
-
-
-
 
 
 
@@ -378,9 +373,8 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 105px;
-    color: #FF1493;
-  
+  font-size: 120px;
+  color: #FF1493;
     font-family: 'Courgette', cursive;
   
 }
@@ -388,7 +382,7 @@ h6 {
 #hero h2 {
   color: #f2f2f2;;
   margin-bottom: 50px;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: bold;
  letter-spacing: 1px;
   text-transform: uppercase;
@@ -396,16 +390,17 @@ h6 {
 
 #hero .btn-scroll {
   transition: 0.4s;
-  color: rgba(255, 255, 255, 0.6);
-  animation: up-down 1s ease-in-out infinite alternate-reverse both;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6), -2px -3px 4px rgba(255, 192, 203, 0.3); /* Pink and white shadow effect */
+
+  animation: up-down 0.5s ease-in-out infinite alternate-reverse both;
 }
 
 #hero .btn-scroll i {
-  font-size: 48px;
+  font-size: 100px;
 }
 
 #hero .btn-scroll:hover {
-  color: hotpink;
+  color: whitesmoke;
 }
 /* Mobile media query - adjust the max-width as per your needs */
 @media only screen and (max-width: 767px) {
@@ -674,7 +669,9 @@ section {
 /*--------------------------------------------------------------
 # PROJECT
 --------------------------------------------------------------*/
-
+#projects{
+  padding: 80px 0;
+}
 .project-items {
   display: flex;
   justify-content: center;
@@ -1399,6 +1396,25 @@ section {
       position: relative;
     }
   
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
 
 
 #footer::before {
