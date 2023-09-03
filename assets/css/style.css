@@ -662,43 +662,126 @@ section {
   margin-top: 30px;
 }
 
-.about .skills-content .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+
+
+
+
+
+
+
+
+/* Add a comma after "ohk" and style it */
+.skills-content li p {
+  font-size: 18px; /* Slightly larger font size */
+  margin: 0;
+  font-style: italic; /* Add italic style to text */
+  font-weight: bold; /* Add bold style to text */
+  color: white; /* White text color */
 }
 
-.about .skills-content .progress .skill {
-  padding: 10px 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 700;
-  font-family: "Raleway", sans-serif;
-  color: whitesmoke;
+/* Style the skills heading with white color and capital letters */
+.skills-content .head {
+  font-weight: bold;
+  font-size: 24px; /* Increase font size for emphasis */
+  margin-bottom: 30px; /* More margin for separation */
+  text-transform: uppercase; /* Capitalize text */
+  color: white; /* White text color */
 }
 
-.about .skills-content .progress .skill .val {
-  float: right;
-  font-style: normal;
+
+
+
+
+
+
+
+/* Remove underlines from text */
+.skills-content li p,
+.skills-content li .head {
+  text-decoration: none;
 }
 
-.about .skills-content .progress-bar-wrap {
-  background: #e6e8eb;
+/* Increase padding and add decorative styles to individual skills */
+.skills-content li {
+  margin-bottom: 30px; /* More margin for separation */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px aqua; /* Aqua shadow */
+  padding: 30px; /* Increased padding for a spacious look */
+  border-radius: 10px; /* Slightly rounded corners */
+  transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
 }
 
-.about .skills-content .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: hotpink;
+/* Style the skill text and heading with decorative styles */
+.skills-content li p,
+.skills-content li .head {
+  font-size: 18px; /* Slightly larger font size */
+  margin: 0;
+  font-style: italic; /* Add italic style to text */
+  font-weight: bold; /* Add bold style to text */
+  color: aqua; /* Aqua text color */
 }
-.about .content p:last-child {
-  margin-bottom: 0;
 
+/* Style individual skills and add more padding to skill icons */
+.skills-content li img {
+  width: 60px; /* Increase the width of the skill icons */
+  height: 60px; /* Make them square */
+  margin-right: 20px; /* More space between the icon and text */
+  box-shadow: 0 3px 6px aqua; /* Aqua shadow for icons */
+  border-radius: 50%; /* Circular icons */
+  padding: 10px; /* Increased padding for skill icons */
 }
-  
+
+/* Add hover effect on individual skills */
+.skills-content li:hover {
+  transform: translateY(-5px); /* Move the element up slightly */
+  box-shadow: 0 6px 12px aqua; /* Aqua shadow on hover */
+}
+
+/* Style the skills container */
+.skills-content {
+  padding: 30px; /* Increased padding for better spacing */
+}
+
+/* Style the skills list */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style the skills heading */
+.head {
+  font-weight: bold;
+  font-size: 24px; /* Increase font size for emphasis */
+  margin-bottom: 30px; /* More margin for separation */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  /* Reduce padding for smaller screens */
+  .skills-content {
+    padding: 20px; /* Adjusted padding for smaller screens */
+  }
+
+  /* Adjust font size for smaller screens */
+  .head {
+    font-size: 20px;
+  }
+
+  /* Adjust the width and height of skill icons for smaller screens */
+  .skills-content li img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Adjust font size and margin for skill text on smaller screens */
+  .skills-content li p,
+  .skills-content li .head {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # PROJECT
 --------------------------------------------------------------*/
